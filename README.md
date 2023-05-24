@@ -2,7 +2,7 @@
 # Šī darba doma ir izveidot Python kodu, kas ļauj izveidot anketu ar pieciem jautājumiem par jautrajiem faktiņiem. Katram jautājumam ir jānorāda atbilde, ko lietotājs ievada. Pēc anketas aizpildīšanas tiek aprēķināti punkti, kurus lietotājs ir nopelnījis, salīdzinot ievadītās atbildes ar pareizajām atbildēm. Galu galā tiek parādīti gan ievadītie jautājumi un atbildes, gan pareizās atbildes, kā arī punktu skaits, ko lietotājs ir ieguvis.
 
 def izveidot_anketu():
-    anketas_atbildes = []  # Tukšs saraksts, kur glabāsim atbildes
+    anketas_atbildes = []  
     pareizas_atbildes = [
         "22 stundas",
         "Zilonis",
@@ -19,13 +19,12 @@ def izveidot_anketu():
         "Cik ilgi var dzīvot vidēji žirafe?"
     ]
 
-    punkti = 0  # Sākotnēji nav iegūtu punktu
+    punkti = 0  
 
     for i, jautajums in enumerate(jautajumi):
         atbilde = input(jautajums + " ")
         anketas_atbildes.append(atbilde)
 
-        # Salīdzina ievadīto atbildi ar pareizo atbildi un piešķir punktus
         if atbilde.lower() == pareizas_atbildes[i].lower():
             punkti += 1
 
